@@ -8,6 +8,7 @@ gem 'rails', '~> 3.2.7'
 gem 'pg'
 
 group :assets do
+  gem 'bootstrap-sass'
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'uglifier'
