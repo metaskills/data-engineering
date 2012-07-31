@@ -166,16 +166,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcrypt-ruby (~> 3.0.0)
-  coffee-rails (~> 3.2.1)
+  bcrypt-ruby
+  coffee-rails
   guard-minitest
   jquery-rails
   mini_backtrace
   minitest-spec-rails
-  paperclip (~> 3.1.4)
+  paperclip
   pg
   poltergeist
   purdytest
   rails (~> 3.2.7)
-  sass-rails (~> 3.2.3)
+  sass-rails
   uglifier

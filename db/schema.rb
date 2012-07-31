@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(:version => 20120731180414) do
   end
 
   create_table "purchaser_items", :force => true do |t|
-    t.integer "purchaser_id", :null => false
-    t.integer "item_id",      :null => false
+    t.integer "purchaser_id",                :null => false
+    t.integer "item_id",                     :null => false
+    t.integer "count",        :default => 1, :null => false
   end
 
   create_table "purchasers", :force => true do |t|
