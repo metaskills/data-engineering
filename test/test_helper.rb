@@ -12,6 +12,8 @@ class ActiveSupport::TestCase
 
   let(:example_input_data)  { upload_data('example_input.tab') }
 
+  before { cleanup_paperclip }
+
 
   protected
 
@@ -21,6 +23,15 @@ class ActiveSupport::TestCase
 
   def upload_data(file_name)
     File.read upload_file(file_name)
+  end
+
+  def open_upload_file(file_name)
+    path = upload_file(file_name)
+    File.open(path,'rb') { |d| yield d }
+  end
+
+  def cleanup_paperclip
+    FileUtils.rm_rf "#{Rails.root}/public/system/uploads"
   end
 
 

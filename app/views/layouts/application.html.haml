@@ -13,5 +13,9 @@
     %section#app.container
       %div.row
         %section#content.span12
+          - if flash[:success]
+            %div.alert.alert-success
+              %a.close{'data-dismiss' => 'alert'} x
+              = flash[:success]
           = yield
 
