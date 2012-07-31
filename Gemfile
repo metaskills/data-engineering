@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jquery-rails'
+gem 'paperclip', '~> 3.1.4'
 gem 'rails', '~> 3.2.7'
 gem 'pg'
 
