@@ -1,0 +1,14 @@
+!!! 5
+%html{:lang => 'en'}
+  %head
+    %meta{:charset => 'utf-8'}
+    %meta{:name => 'author', :content => 'Ken Collins'}
+    = csrf_meta_tags
+    %title Data Engineering Import
+    %link{:rel => 'author', :href => 'mailto:ken@metaskills.net'}
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+  %body
+    %section#app
+      = yield 
+

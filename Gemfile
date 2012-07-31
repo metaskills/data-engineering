@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'bcrypt-ruby'
+gem 'haml'
 gem 'jquery-rails'
 gem 'paperclip'
 gem 'rails', '~> 3.2.7'
