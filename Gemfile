@@ -16,5 +16,6 @@ group :test do
   gem 'minitest-spec-rails'
   gem 'mini_backtrace'
   gem 'purdytest'
+  gem 'poltergeist', require: 'capybara/poltergeist'
 end
 
