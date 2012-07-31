@@ -18,6 +18,11 @@ ActiveRecord::Schema.define(:version => 20120731180414) do
     t.decimal "price",       :precision => 8, :scale => 2, :null => false
   end
 
+  create_table "merchants", :force => true do |t|
+    t.string "name",    :null => false
+    t.string "address", :null => false
+  end
+
   create_table "purchaser_items", :force => true do |t|
     t.integer "purchaser_id",                :null => false
     t.integer "item_id",                     :null => false

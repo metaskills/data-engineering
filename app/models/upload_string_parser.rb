@@ -20,6 +20,7 @@ class UploadStringParser
     CSV.parse @string, col_sep: "\t", headers: true do |row|
       purchaser = find_or_create_purchaser(row)
       item = find_or_create_item(row)
+      find_or_create_merchant(row)
       create_purchase_record purchaser, item, row
     end
   end
@@ -34,6 +35,11 @@ class UploadStringParser
   def find_or_create_item(row)
     atts = {description: row['item description'], price: row['item price']}
     Item.find_by_description(atts[:description]) || Item.create!(atts, without_protection: true)
+  end
+
+  def find_or_create_merchant(row)
+    atts = {name: row['merchant name'], address: row['merchant address']}
+    Merchant.find_by_name(atts[:name]) || Merchant.create!(atts, without_protection: true)
   end
 
   def create_purchase_record(purchaser, item, row)

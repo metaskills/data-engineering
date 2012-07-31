@@ -8,6 +8,7 @@ class ActiveSupport::TestCase
   let(:new_purchaser)       { Purchaser.new }
   let(:new_item)            { Item.new }
   let(:new_purchaser_item)  { PurchaserItem.new }
+  let(:new_merchant)        { Merchant.new }
 
   let(:example_input_data)  { upload_data('example_input.tab') }
 
