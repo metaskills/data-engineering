@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'jquery-rails'
 gem 'rails', '~> 3.2.7'
 gem 'pg'
 
@@ -10,5 +11,10 @@ group :assets do
   gem 'uglifier'
 end
 
-gem 'jquery-rails'
+group :test do
+  gem 'guard-minitest'
+  gem 'minitest-spec-rails'
+  gem 'mini_backtrace'
+  gem 'purdytest'
+end
 
