@@ -13,6 +13,20 @@
 
 ActiveRecord::Schema.define(:version => 20120731180414) do
 
+  create_table "items", :force => true do |t|
+    t.string  "description",                               :null => false
+    t.decimal "price",       :precision => 8, :scale => 2, :null => false
+  end
+
+  create_table "purchaser_items", :force => true do |t|
+    t.integer "purchaser_id", :null => false
+    t.integer "item_id",      :null => false
+  end
+
+  create_table "purchasers", :force => true do |t|
+    t.string "name", :null => false
+  end
+
   create_table "uploads", :force => true do |t|
     t.boolean  "processed"
     t.datetime "created_at",        :null => false
