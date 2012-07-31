@@ -9,6 +9,9 @@
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
   %body
-    %section#app
-      = yield 
+
+    %section#app.container
+      %div.row
+        %section#content.span12
+          = yield
 
